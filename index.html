@@ -3,172 +3,367 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The VR Ring | Commissions</title>
+    <title>The VR Ring | Avatar & VRChat Commissions</title>
     <style>
+        :root {
+            --bg-main: #050509;
+            --bg-card: #141322;
+            --accent: #8b5dff;
+            --accent-soft: #8b5dff33;
+            --accent-strong: #c29fff;
+            --text-main: #f5f5ff;
+            --text-muted: #b5b5d6;
+            --success: #3bdc85;
+            --danger: #ff6f6f;
+            --border-radius: 14px;
+            --shadow-soft: 0 14px 35px rgba(0, 0, 0, 0.55);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #111;
-            color: #f4f4f4;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top, #191233 0, #050509 45%, #020208 100%);
+            color: var(--text-main);
         }
 
         header {
-            background: linear-gradient(135deg, #5a00ff, #9e5cff);
-            padding: 40px 0;
             text-align: center;
-            color: white;
+            padding: 40px 16px 28px;
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: clamp(2.2rem, 5vw, 3rem);
+            margin: 0 0 6px;
+            letter-spacing: 0.04em;
+        }
+
+        header p {
             margin: 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .tagline {
+            margin-top: 10px;
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: #ffffff10;
+            font-size: 0.8rem;
+            border: 1px solid #ffffff20;
         }
 
         .container {
-            width: 85%;
-            max-width: 1000px;
-            margin: 30px auto;
-            background: #1c1c1c;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #5a00ff50;
+            width: 100%;
+            max-width: 1060px;
+            margin: 0 auto 30px;
+            padding: 0 14px 30px;
         }
 
-        h2 {
-            color: #b58eff;
-            border-left: 5px solid #b58eff;
-            padding-left: 10px;
+        .grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 18px;
+        }
+
+        @media (max-width: 800px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: var(--bg-card);
+            padding: 18px 16px 18px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            border: 1px solid #ffffff16;
+        }
+
+        .card h2 {
+            font-size: 1.1rem;
+            margin: 0 0 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-strong);
+        }
+
+        .card h3 {
+            font-size: 0.98rem;
+            margin: 16px 0 6px;
+            color: var(--accent-strong);
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.75rem;
+            padding: 4px 9px;
+            border-radius: 999px;
+            background: #ffffff10;
+            color: var(--text-muted);
         }
 
         ul {
             list-style: none;
             padding-left: 0;
+            margin: 6px 0 0;
         }
 
         ul li {
-            background: #222;
-            padding: 10px;
-            margin-bottom: 8px;
-            border-radius: 6px;
-            border-left: 4px solid #b58eff;
+            font-size: 0.9rem;
+            padding: 7px 9px;
+            margin-bottom: 5px;
+            border-radius: 9px;
+            background: #1b1a2b;
+        }
+
+        .highlight {
+            border-left: 3px solid var(--accent);
         }
 
         .price-box {
-            background: #222;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 5px solid #39c467;
+            background: #111020;
+            border-left: 4px solid var(--success);
+            margin-top: 6px;
+        }
+
+        .price-box p {
+            font-size: 0.9rem;
+            margin: 4px 0;
+        }
+
+        .price-box ul li {
+            background: #181729;
+        }
+
+        .note {
+            font-size: 0.83rem;
+            color: var(--text-muted);
+            margin-top: 6px;
+        }
+
+        .badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .badge {
+            padding: 5px 10px;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            background: #ffffff10;
+        }
+
+        .badge.green {
+            background: #3bdc8530;
+            border: 1px solid #3bdc8560;
+        }
+
+        .badge.red {
+            background: #ff6f6f26;
+            border: 1px solid #ff6f6f55;
+        }
+
+        .discord-section {
+            text-align: center;
         }
 
         .discord-button {
-            display: block;
-            width: fit-content;
-            padding: 12px 20px;
-            background-color: #5865F2;
-            color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 11px 18px;
+            margin-top: 10px;
+            border-radius: 999px;
+            background: #5865F2;
+            color: #fff;
             text-decoration: none;
-            border-radius: 8px;
-            margin: 20px auto;
-            text-align: center;
-            font-weight: bold;
-            transition: 0.3s;
+            font-size: 0.95rem;
+            font-weight: 600;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.55);
+            border: none;
+            cursor: pointer;
+        }
+
+        .discord-button span {
+            font-size: 1.2rem;
         }
 
         .discord-button:hover {
-            background-color: #4753c7;
+            background: #4753c7;
+        }
+
+        .roles-box {
+            margin-top: 14px;
+            padding: 12px 12px 10px;
+            border-radius: 10px;
+            background: #1b1a2b;
+            border: 1px dashed #8b5dff88;
+            text-align: left;
+        }
+
+        .roles-box p {
+            font-size: 0.87rem;
+            margin: 0 0 6px;
+        }
+
+        .roles-box ul li {
+            font-size: 0.85rem;
+            background: #201f34;
         }
 
         footer {
             text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-            color: #999;
+            padding: 12px 10px 26px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* Make tap targets nicer on phone */
+        a, button {
+            -webkit-tap-highlight-color: transparent;
         }
     </style>
 </head>
-
 <body>
 
-    <header>
-        <h1>The VR Ring</h1>
-        <p>Avatar Creation • Textures • Blender • Unity • VRChat Services</p>
-    </header>
+<header>
+    <h1>The VR Ring</h1>
+    <p>VRChat Avatars • Textures • Bases • Blender • Unity</p>
+    <div class="tagline">
+        Quality work • Fair pricing • Team-based commissions
+    </div>
+</header>
 
-    <div class="container">
+<main class="container">
 
-        <h2>What We Offer</h2>
+    <section class="grid">
 
-        <h3>Textures</h3>
-        <ul>
-            <li>Custom textures</li>
-            <li>Recolors & style changes</li>
-            <li>Material adjustments</li>
-            <li>Clean-ups & enhancements</li>
-        </ul>
+        <!-- LEFT SIDE: SERVICES -->
+        <div class="card">
+            <h2>What We Offer</h2>
 
-        <h3>Avatars</h3>
-        <ul>
-            <li>Custom VRChat avatars</li>
-            <li>Avatar edits & fixes</li>
-            <li>Optimization for performance</li>
-            <li>Bug cleanup & improvements</li>
-        </ul>
-
-        <h3>Bases</h3>
-        <ul>
-            <li>Custom base edits</li>
-            <li>Shape & proportion changes</li>
-            <li>Rig adjustments</li>
-            <li>Add-ons & small modifications</li>
-        </ul>
-
-        <h3>Blender Work</h3>
-        <ul>
-            <li>Modeling & sculpting</li>
-            <li>Geometry cleanup</li>
-            <li>Weight painting</li>
-            <li>Rig repair & adjustments</li>
-        </ul>
-
-        <h3>Unity Work</h3>
-        <ul>
-            <li>Avatar upload</li>
-            <li>Material setup</li>
-            <li>FX Setup</li>
-            <li>Scene preparation</li>
-        </ul>
-
-        <h2>Pricing</h2>
-        <div class="price-box">
-            <p><strong>Starting Price:</strong> £20 – £30</p>
-            <p>Prices increase depending on complexity and detail.</p>
-            <p><strong>We do NOT charge for:</strong></p>
+            <h3>🎨 Textures</h3>
             <ul>
-                <li>Toggles</li>
-                <li>Simple tasks</li>
-                <li>Minor fixes</li>
+                <li class="highlight">Custom textures for your avatar</li>
+                <li>Recolors & style changes</li>
+                <li>Material adjustments & polish</li>
+                <li>Texture clean-ups and enhancements</li>
+            </ul>
+
+            <h3>🧍 Avatars</h3>
+            <ul>
+                <li class="highlight">Custom VRChat avatars</li>
+                <li>Edits to existing models</li>
+                <li>Optimization for performance</li>
+                <li>Bug cleanup & general fixes</li>
+            </ul>
+
+            <h3>🧬 Bases</h3>
+            <ul>
+                <li>Custom base edits</li>
+                <li>Shape & proportion changes</li>
+                <li>Rig adjustments & fixes</li>
+                <li>Add-ons and minor modifications</li>
+            </ul>
+
+            <h3>🛠 Blender</h3>
+            <ul>
+                <li>Modeling & sculpting</li>
+                <li>Geometry cleanup</li>
+                <li>Weight painting</li>
+                <li>Rig repair & adjustments</li>
+            </ul>
+
+            <h3>🔧 Unity</h3>
+            <ul>
+                <li>Avatar upload & setup</li>
+                <li>Material & shader setup</li>
+                <li>FX and components</li>
+                <li>Scene preparation</li>
             </ul>
         </div>
 
-        <h2>Refund & Payment Policy</h2>
-        <ul>
-            <li><strong>Payment is taken after the avatar is completed</strong> to avoid scams.</li>
-            <li>If we cannot complete your commission or run into a problem we cannot fix, you receive a <strong>full refund</strong>.</li>
-        </ul>
+        <!-- RIGHT SIDE: PRICING / POLICY / DISCORD -->
+        <div class="card">
+            <h2>Pricing & Policy</h2>
 
-        <h2>Team Compensation</h2>
-        <p>Every team member involved in your project receives a percentage of the payment.</p>
+            <div class="price-box card">
+                <p><strong>Starting price:</strong> £20 – £30</p>
+                <p>Final cost depends on complexity, detail, and time required.</p>
 
-        <h2>Join Our Discord</h2>
-        <a class="discord-button" href="https://discord.gg/PaUHN3hfjY" target="_blank">
-            Join The VR Ring Discord
-        </a>
+                <p><strong>We do NOT charge for:</strong></p>
+                <ul>
+                    <li>Toggles</li>
+                    <li>Simple tasks</li>
+                    <li>Minor fixes</li>
+                </ul>
+            </div>
 
-    </div>
+            <div class="badge-row">
+                <div class="badge green">✅ Honest pricing</div>
+                <div class="badge green">✅ No toggle fees</div>
+                <div class="badge red">❌ No pay-before-work</div>
+            </div>
 
-    <footer>
-        © 2025 The VR Ring — All Rights Reserved
-    </footer>
+            <h3>🔄 Refund & Payment</h3>
+            <ul>
+                <li><strong>Payment is normally taken after the avatar is completed.</strong></li>
+                <li>If we cannot do the work or run into issues we cannot fix, we give a <strong>full refund</strong>.</li>
+            </ul>
+            <p class="note">
+                This helps protect both you and our team from scams or unfinished work.
+            </p>
+
+            <h3>🤝 Team Compensation</h3>
+            <p style="font-size:0.9rem;">
+                Everyone on the team gets a <strongpercentage of the payment</strong> based on their part in the project.
+                This keeps things fair and encourages high quality work from everyone involved.
+            </p>
+
+            <hr style="border: none; border-top: 1px solid #ffffff22; margin: 12px 0;">
+
+            <section class="discord-section">
+                <h2>Join Our Discord</h2>
+                <p class="note">
+                    All commissions, WIP previews, and updates are handled through our Discord server.
+                </p>
+
+                <a class="discord-button" href="https://discord.gg/PaUHN3hfjY" target="_blank" rel="noopener">
+                    <span>💬</span> Join The VR Ring Server
+                </a>
+
+                <div class="roles-box">
+                    <p><strong>Commission Perks in Discord:</strong></p>
+                    <ul>
+                        <li>Special <strong>Commissioner Roles</strong> to show you’ve supported the team</li>
+                        <li>Access to <strong>commission channels</strong> for progress updates</li>
+                        <li>Priority communication for active projects</li>
+                    </ul>
+                    <p class="note">
+                        Roles are given once your commission is started, and kept as a thank-you for supporting The VR Ring.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+    </section>
+</main>
+
+<footer>
+    © 2025 The VR Ring — VRChat Avatars & Services
+</footer>
 
 </body>
 </html>
+
