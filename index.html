@@ -87,9 +87,6 @@
         .card h2 {
             font-size: 1.1rem;
             margin: 0 0 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
             color: var(--accent-strong);
         }
 
@@ -97,17 +94,6 @@
             font-size: 0.98rem;
             margin: 16px 0 6px;
             color: var(--accent-strong);
-        }
-
-        .pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 0.75rem;
-            padding: 4px 9px;
-            border-radius: 999px;
-            background: #ffffff10;
-            color: var(--text-muted);
         }
 
         ul {
@@ -139,42 +125,16 @@
             margin: 4px 0;
         }
 
-        .price-box ul li {
-            background: #181729;
+        .roles-box {
+            margin-top: 14px;
+            padding: 12px;
+            border-radius: 10px;
+            background: #1b1a2b;
+            border: 1px dashed #8b5dff88;
         }
 
-        .note {
-            font-size: 0.83rem;
-            color: var(--text-muted);
-            margin-top: 6px;
-        }
-
-        .badge-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 8px;
-        }
-
-        .badge {
-            padding: 5px 10px;
-            border-radius: 999px;
-            font-size: 0.75rem;
-            background: #ffffff10;
-        }
-
-        .badge.green {
-            background: #3bdc8530;
-            border: 1px solid #3bdc8560;
-        }
-
-        .badge.red {
-            background: #ff6f6f26;
-            border: 1px solid #ff6f6f55;
-        }
-
-        .discord-section {
-            text-align: center;
+        .roles-box ul li {
+            background: #201f34;
         }
 
         .discord-button {
@@ -191,35 +151,6 @@
             font-size: 0.95rem;
             font-weight: 600;
             box-shadow: 0 8px 18px rgba(0, 0, 0, 0.55);
-            border: none;
-            cursor: pointer;
-        }
-
-        .discord-button span {
-            font-size: 1.2rem;
-        }
-
-        .discord-button:hover {
-            background: #4753c7;
-        }
-
-        .roles-box {
-            margin-top: 14px;
-            padding: 12px 12px 10px;
-            border-radius: 10px;
-            background: #1b1a2b;
-            border: 1px dashed #8b5dff88;
-            text-align: left;
-        }
-
-        .roles-box p {
-            font-size: 0.87rem;
-            margin: 0 0 6px;
-        }
-
-        .roles-box ul li {
-            font-size: 0.85rem;
-            background: #201f34;
         }
 
         footer {
@@ -228,20 +159,16 @@
             font-size: 0.75rem;
             color: var(--text-muted);
         }
-
-        /* Make tap targets nicer on phone */
-        a, button {
-            -webkit-tap-highlight-color: transparent;
-        }
     </style>
 </head>
+
 <body>
 
 <header>
     <h1>The VR Ring</h1>
-    <p>VRChat Avatars • Textures • Bases • Blender • Unity</p>
+    <p>VRChat Avatars • Textures • Blender • Unity • Specialist Support</p>
     <div class="tagline">
-        Quality work • Fair pricing • Team-based commissions
+        Quality • Fair Pricing • Skilled Team • Mobile Friendly
     </div>
 </header>
 
@@ -249,32 +176,28 @@
 
     <section class="grid">
 
-        <!-- LEFT SIDE: SERVICES -->
+        <!-- SERVICES -->
         <div class="card">
             <h2>What We Offer</h2>
 
             <h3>🎨 Textures</h3>
             <ul>
-                <li class="highlight">Custom textures for your avatar</li>
+                <li class="highlight">Custom textures and full reworks</li>
                 <li>Recolors & style changes</li>
-                <li>Material adjustments & polish</li>
-                <li>Texture clean-ups and enhancements</li>
+                <li>Material adjustments</li>
             </ul>
 
             <h3>🧍 Avatars</h3>
             <ul>
                 <li class="highlight">Custom VRChat avatars</li>
-                <li>Edits to existing models</li>
-                <li>Optimization for performance</li>
-                <li>Bug cleanup & general fixes</li>
+                <li>Edits, fixes & optimization</li>
+                <li>Performance improvements</li>
             </ul>
 
             <h3>🧬 Bases</h3>
             <ul>
                 <li>Custom base edits</li>
-                <li>Shape & proportion changes</li>
-                <li>Rig adjustments & fixes</li>
-                <li>Add-ons and minor modifications</li>
+                <li>Shape, proportion & rig fixes</li>
             </ul>
 
             <h3>🛠 Blender</h3>
@@ -282,26 +205,40 @@
                 <li>Modeling & sculpting</li>
                 <li>Geometry cleanup</li>
                 <li>Weight painting</li>
-                <li>Rig repair & adjustments</li>
             </ul>
 
             <h3>🔧 Unity</h3>
             <ul>
-                <li>Avatar upload & setup</li>
-                <li>Material & shader setup</li>
-                <li>FX and components</li>
+                <li>Avatar uploading</li>
+                <li>Material & FX setup</li>
                 <li>Scene preparation</li>
             </ul>
+
+            <h3>⭐ Specialist Team Members</h3>
+            <ul>
+                <li>We have team members with **advanced expertise** in specific areas</li>
+                <li>High-difficulty Blender fixes</li>
+                <li>Unity troubleshooting & optimization</li>
+                <li>Complex avatar repair and restoration</li>
+            </ul>
+
+            <h3>🧩 Need a Model Fixed?</h3>
+            <ul>
+                <li>If you provide a **broken or ripped model**, one of our specialists can work on repairing it for you.</li>
+                <li>We fix rig issues, broken meshes, missing materials, and more.</li>
+                <li>Your model stays private and is handled only by trusted team members.</li>
+            </ul>
+
         </div>
 
-        <!-- RIGHT SIDE: PRICING / POLICY / DISCORD -->
+        <!-- RIGHT SIDE (PRICING, DISCORD, ROLES) -->
         <div class="card">
+
             <h2>Pricing & Policy</h2>
 
             <div class="price-box card">
-                <p><strong>Starting price:</strong> £20 – £30</p>
-                <p>Final cost depends on complexity, detail, and time required.</p>
-
+                <p><strong>Starting Price:</strong> £20 – £30</p>
+                <p>Price may increase based on detail, difficulty, and time required.</p>
                 <p><strong>We do NOT charge for:</strong></p>
                 <ul>
                     <li>Toggles</li>
@@ -310,60 +247,45 @@
                 </ul>
             </div>
 
-            <div class="badge-row">
-                <div class="badge green">✅ Honest pricing</div>
-                <div class="badge green">✅ No toggle fees</div>
-                <div class="badge red">❌ No pay-before-work</div>
-            </div>
-
             <h3>🔄 Refund & Payment</h3>
             <ul>
-                <li><strong>Payment is normally taken after the avatar is completed.</strong></li>
-                <li>If we cannot do the work or run into issues we cannot fix, we give a <strong>full refund</strong>.</li>
+                <li><strong>Payment is usually taken after the avatar is completed.</strong></li>
+                <li>If the team cannot finish the project, you receive a **full refund**.</li>
             </ul>
-            <p class="note">
-                This helps protect both you and our team from scams or unfinished work.
-            </p>
 
             <h3>🤝 Team Compensation</h3>
-            <p style="font-size:0.9rem;">
-                Everyone on the team gets a <strongpercentage of the payment</strong> based on their part in the project.
-                This keeps things fair and encourages high quality work from everyone involved.
-            </p>
+            <p>Every team member receives a percentage of the payment based on the work they contribute.</p>
 
             <hr style="border: none; border-top: 1px solid #ffffff22; margin: 12px 0;">
 
-            <section class="discord-section">
-                <h2>Join Our Discord</h2>
+            <h2>Join Our Discord</h2>
+            <p class="note">All commissions, updates, previews, and communication happen in our server.</p>
+
+            <a class="discord-button" href="https://discord.gg/PaUHN3hfjY" target="_blank">
+                💬 Join The VR Ring Discord
+            </a>
+
+            <div class="roles-box">
+                <p><strong>Commission Perks:</strong></p>
+                <ul>
+                    <li><strong>Commissioner Role</strong> in the server</li>
+                    <li>Private commission channels</li>
+                    <li>Priority communication & updates</li>
+                    <li>Access to special support channels</li>
+                </ul>
                 <p class="note">
-                    All commissions, WIP previews, and updates are handled through our Discord server.
+                    Roles are permanent and show your support for the team.
                 </p>
+            </div>
 
-                <a class="discord-button" href="https://discord.gg/PaUHN3hfjY" target="_blank" rel="noopener">
-                    <span>💬</span> Join The VR Ring Server
-                </a>
-
-                <div class="roles-box">
-                    <p><strong>Commission Perks in Discord:</strong></p>
-                    <ul>
-                        <li>Special <strong>Commissioner Roles</strong> to show you’ve supported the team</li>
-                        <li>Access to <strong>commission channels</strong> for progress updates</li>
-                        <li>Priority communication for active projects</li>
-                    </ul>
-                    <p class="note">
-                        Roles are given once your commission is started, and kept as a thank-you for supporting The VR Ring.
-                    </p>
-                </div>
-            </section>
         </div>
 
     </section>
 </main>
 
 <footer>
-    © 2025 The VR Ring — VRChat Avatars & Services
+    © 2025 The VR Ring — VRChat Services
 </footer>
 
 </body>
-</html>
-
+    </html>
