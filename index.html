@@ -19,9 +19,7 @@
             --shadow-soft: 0 14px 35px rgba(0, 0, 0, 0.55);
         }
 
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
@@ -71,17 +69,16 @@
         }
 
         @media (max-width: 800px) {
-            .grid {
-                grid-template-columns: 1fr;
-            }
+            .grid { grid-template-columns: 1fr; }
         }
 
         .card {
             background: var(--bg-card);
-            padding: 18px 16px 18px;
+            padding: 18px 16px;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow-soft);
             border: 1px solid #ffffff16;
+            margin-bottom: 20px;
         }
 
         .card h2 {
@@ -110,14 +107,13 @@
             background: #1b1a2b;
         }
 
-        .highlight {
-            border-left: 3px solid var(--accent);
-        }
+        .highlight { border-left: 3px solid var(--accent); }
 
         .price-box {
             background: #111020;
             border-left: 4px solid var(--success);
             margin-top: 6px;
+            padding: 10px;
         }
 
         .price-box p {
@@ -133,9 +129,7 @@
             border: 1px dashed #8b5dff88;
         }
 
-        .roles-box ul li {
-            background: #201f34;
-        }
+        .roles-box ul li { background: #201f34; }
 
         .discord-button {
             display: inline-flex;
@@ -167,13 +161,10 @@
 <header>
     <h1>The VR Ring</h1>
     <p>VRChat Avatars • Textures • Blender • Unity • Specialist Support</p>
-    <div class="tagline">
-        Quality • Fair Pricing • Skilled Team • Mobile Friendly
-    </div>
+    <div class="tagline">Quality • Fair Pricing • Skilled Team • Mobile Friendly</div>
 </header>
 
 <main class="container">
-
     <section class="grid">
 
         <!-- SERVICES -->
@@ -216,30 +207,23 @@
 
             <h3>⭐ Specialist Team Members</h3>
             <ul>
-                <li>We have team members with <strong>advanced expertise</strong> in specific areas.</li>
-                <li>High-difficulty Blender fixes</li>
-                <li>Unity troubleshooting & optimization</li>
-                <li>Complex avatar repair and restoration</li>
+                <li>High expertise in Blender & Unity fixes</li>
+                <li>Complex avatar repair & restoration</li>
             </ul>
 
             <h3>🧩 Need a Model Fixed?</h3>
             <ul>
-                <li>If you provide a <strong>broken or ripped model</strong>, one of our specialists can attempt to repair it.</li>
-                <li>We work on rig issues, broken meshes, missing materials, texture problems, and general model damage.</li>
-                <li>Your model stays private and is only handled by trusted members of our team.</li>
-                <li><strong>Please understand:</strong> some models may not be fully repairable due to corruption, missing files, or severe damage.</li>
-                <li>If we cannot fix a model, we will inform you as early as possible.</li>
-                <li>We always try our best, but <strong>not every model can be perfectly restored</strong>. Thank you for understanding.</li>
+                <li>We repair rig issues, broken meshes, missing materials, textures, and general model damage.</li>
+                <li>Your model stays private and handled only by trusted team members.</li>
+                <li>Some models may not be fully repairable; we’ll notify you early if that’s the case.</li>
             </ul>
-
         </div>
 
-        <!-- RIGHT SIDE (PRICING, DISCORD, ROLES) -->
+        <!-- RIGHT SIDE (PRICING, POLICY, COMMISSIONS) -->
         <div class="card">
-
             <h2>Pricing & Policy</h2>
 
-            <div class="price-box card">
+            <div class="price-box">
                 <p><strong>Starting Price:</strong> £20 – £30</p>
                 <p>Price may increase based on detail, difficulty, and time required.</p>
                 <p><strong>We do NOT charge for:</strong></p>
@@ -256,39 +240,32 @@
                 <li>If the team cannot finish the project, you receive a <strong>full refund</strong>.</li>
             </ul>
 
-            <h3>🤝 Team Compensation</h3>
-            <p>Every team member receives a percentage of the payment based on the work they contribute.</p>
-
-            <hr style="border: none; border-top: 1px solid #ffffff22; margin: 12px 0;">
-
-            <h2>Join Our Discord</h2>
-            <p class="note">All commissions, updates, previews, and communication happen in our server.</p>
-
-            <a class="discord-button" href="https://discord.gg/PaUHN3hfjY" target="_blank">
-                💬 Join The VR Ring Discord
-            </a>
+            <h3>⏳ Commission Time</h3>
+            <ul>
+                <li>Avatar commissions take time and care to ensure high quality.</li>
+                <li>Our team also has real-life commitments; we try our best to deliver as quickly as possible.</li>
+                <li>Complex or detailed avatars may take longer, but we keep you updated throughout the process.</li>
+                <li>We truly appreciate your patience — your avatar is worth the wait 💜</li>
+            </ul>
 
             <div class="roles-box">
-                <p><strong>Commission Perks:</strong></p>
+                <h3>Team Roles</h3>
                 <ul>
-                    <li><strong>Commissioner Role</strong> in the server</li>
-                    <li>Private commission channels</li>
-                    <li>Priority communication & updates</li>
-                    <li>Access to special support channels</li>
+                    <li>Blender Specialists</li>
+                    <li>Unity & FX Experts</li>
+                    <li>Texture Artists</li>
+                    <li>Avatar Optimizers</li>
                 </ul>
-                <p class="note">
-                    Roles are permanent and show your support for the team.
-                </p>
             </div>
 
+            <a class="discord-button" href="https://discord.gg/yourserver" target="_blank">Join Our Discord</a>
         </div>
-
     </section>
 </main>
 
 <footer>
-    © 2025 The VR Ring — VRChat Services
+    &copy; 2026 The VR Ring | All Rights Reserved
 </footer>
 
 </body>
-</html>
+                    </html>
